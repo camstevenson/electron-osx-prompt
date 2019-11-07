@@ -28,7 +28,10 @@ function InputPrompt (_label = 'Please enter a value', _placeholder = '', _icon 
       frame: false,
       resizable: false,
       parent: BrowserWindow.getFocusedWindow(),
-      modal: true
+      modal: true,
+      webPreferences: {
+        nodeIntegration: true
+      }
     });
 
     promptWindow.setMenu(null);
